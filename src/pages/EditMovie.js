@@ -167,14 +167,16 @@ export const EditMovie = () => {
             >
               Image
             </label>
+            <div className="flex justify-between items-center">
             <input type="file" id="add-image" className="text-xs" onChange={(e) => onImageChange(e)}/>
-            <button className="text-sm ml-4" onClick={(e) => onImageUpload(e)}>Upload</button>
+            <button className="rounded-sm text-xs bg-white hover:bg-gray-100 py-1 px-3 shadow-lg" onClick={(e) => onImageUpload(e)}>Upload</button>
             {
               isImageUploading && <span class="material-symbols-outlined text-sm ">progress_activity</span>
             }
             {
               isImageUploaded && !isImageUploading && <span class="material-symbols-outlined text-green-600">check</span>
             }
+            </div>
           </div>
           {error && (
             <div className="flex justify-center items-center">
