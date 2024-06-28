@@ -55,7 +55,7 @@ export const Home = () => {
             <Navbar />
             {
                 currentUser &&
-                <div className="flex gap-y-14 flex-wrap justify-around mx-1 my-4">
+                <div className="flex gap-y-14 gap-x-2 flex-wrap justify-around mx-1 my-4">
                 {
                     movies.length > 0 && (
                         movies.map(movie => <MovieCard data-aos="fade-up" movie={movie} fetchMovies={fetchMovies} />)
